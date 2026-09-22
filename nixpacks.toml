@@ -1,0 +1,12 @@
+# Coolify / Nixpacks: this is a static HTML site, not a Node app.
+# Prefer Coolify "Static / Nginx" with publish directory = / and no build.
+# This file exists so Nixpacks does not try to detect npm and run a build.
+
+[phases.setup]
+nixPkgs = ["caddy"]
+
+[phases.build]
+cmds = ["echo 'static site — nothing to build'"]
+
+[start]
+cmd = "caddy file-server --listen :${PORT:-80} --root /app"

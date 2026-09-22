@@ -1,0 +1,708 @@
+/**
+ * Rosebrook components — buttons, links, cards, badges, inputs,
+ * nav, section headers, banners, dialogs, footer.
+ *
+ * Live-site aliases (.btn, .btn-gold, .nav-links, …) are kept so
+ * markup from rosebrookrpggoods.com can be reused without rewrite.
+ */
+
+/* ── Buttons ── */
+
+.rb-btn,
+.btn {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: var(--text-btn);
+  font-weight: 400;
+  letter-spacing: var(--tracking-cinzel-wide);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  line-height: 1.2;
+  transition: background var(--ease), box-shadow var(--ease), transform var(--ease),
+    color var(--ease), border-color var(--ease);
+}
+
+.rb-btn:focus-visible,
+.btn:focus-visible {
+  outline-offset: 3px;
+}
+
+.rb-btn--gold,
+.btn-gold,
+.rb-nav__cta,
+.nav-craft {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.rb-btn--gold:hover,
+.btn-gold:hover,
+.rb-nav__cta:hover,
+.nav-craft:hover {
+  background: var(--gold-lt);
+  color: var(--ink);
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-1px);
+}
+
+.rb-btn--outline,
+.btn-outline {
+  background: transparent;
+  color: var(--gold-pale);
+  border: var(--border-gold);
+}
+
+.rb-btn--outline:hover,
+.btn-outline:hover {
+  background: rgba(184, 134, 11, 0.12);
+  color: var(--gold-pale);
+  box-shadow: var(--shadow-gold-soft);
+  transform: translateY(-1px);
+}
+
+/* Outline on parchment (gold text instead of pale) */
+.rb-btn--outline.rb-btn--on-parchment {
+  color: var(--gold);
+}
+
+.rb-btn--outline.rb-btn--on-parchment:hover {
+  color: var(--leather);
+}
+
+.rb-btn--sm,
+.btn-sm {
+  font-size: var(--text-sm);
+  padding: 0.7rem 1.5rem;
+}
+
+.rb-btn:disabled,
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.rb-nav__cta,
+.nav-craft {
+  font-family: var(--font-title);
+  font-size: 0.7rem;
+  letter-spacing: var(--tracking-cinzel);
+  text-transform: uppercase;
+  padding: 0.45rem 1.1rem;
+  text-decoration: none;
+  border-radius: var(--radius);
+  display: inline-block;
+}
+
+/* ── Text links ── */
+
+.rb-link {
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.rb-link:hover {
+  color: var(--gold-lt);
+}
+
+.rb-link--quiet {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(184, 134, 11, 0.45);
+}
+
+.rb-link--quiet:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* ── Cards / panels ── */
+
+.rb-card,
+.rb-panel {
+  background: var(--parchment);
+  color: var(--leather);
+  border: 1.5px solid rgba(184, 134, 11, 0.55);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-panel), var(--shadow-inset);
+  padding: var(--space-6);
+}
+
+.rb-card--recessed,
+.rb-panel--recessed {
+  background: var(--parchment-dk);
+}
+
+.rb-card--ink {
+  background: var(--ink);
+  color: var(--parchment);
+  border-color: var(--gold);
+}
+
+.rb-card__kicker {
+  font-family: var(--font-title);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 0.5rem;
+}
+
+.rb-card__title {
+  font-family: var(--font-title);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0 0 0.6rem;
+  color: inherit;
+}
+
+.rb-card--ink .rb-card__title {
+  color: var(--gold-pale);
+}
+
+.rb-card__body {
+  margin: 0;
+  color: inherit;
+}
+
+.rb-card-grid {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+/* ── Badges ── */
+
+.rb-badge {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: 0.62rem;
+  letter-spacing: var(--tracking-cinzel);
+  text-transform: uppercase;
+  padding: 0.28rem 0.6rem;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  line-height: 1.2;
+  vertical-align: middle;
+}
+
+.rb-badge--gold {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.rb-badge--pale {
+  background: var(--gold-pale);
+  color: var(--ink);
+  border-color: rgba(184, 134, 11, 0.4);
+}
+
+.rb-badge--green {
+  background: var(--green);
+  color: var(--parchment);
+}
+
+.rb-badge--crimson {
+  background: var(--crimson);
+  color: var(--parchment);
+}
+
+.rb-badge--leather {
+  background: var(--leather);
+  color: var(--gold-pale);
+}
+
+.rb-badge--outline {
+  background: transparent;
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* ── Inputs ── */
+
+.rb-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.rb-label {
+  font-family: var(--font-title);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-cinzel);
+  text-transform: uppercase;
+  color: var(--leather);
+}
+
+.rb-hint {
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--leather-mid);
+}
+
+.rb-input,
+.rb-textarea,
+.rb-select {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--ink);
+  background: var(--parchment);
+  border: 1.5px solid var(--leather-mid);
+  border-radius: var(--radius);
+  padding: 0.65rem 0.8rem;
+  width: 100%;
+  transition: border-color var(--ease-color), box-shadow var(--ease-color);
+}
+
+.rb-textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.rb-input:focus,
+.rb-textarea:focus,
+.rb-select:focus {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-gold-soft);
+  outline: none;
+}
+
+.rb-input[aria-invalid="true"],
+.rb-field.is-invalid .rb-input {
+  border-color: var(--crimson);
+}
+
+.rb-error {
+  font-family: var(--font-title);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--crimson);
+}
+
+/* ── Nav (ink bar + gold border) ── */
+
+.rb-nav,
+nav.rb-nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: 0 var(--space-8);
+  height: var(--nav-height);
+  width: 100%;
+  background: var(--ink);
+  border-bottom: 2px solid var(--gold-lt);
+  box-shadow: 0 0 18px rgba(184, 134, 11, 0.28);
+}
+
+.rb-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: var(--gold-pale);
+  flex-shrink: 0;
+}
+
+.rb-nav__brand img {
+  height: 44px;
+  width: auto;
+  background: var(--parchment);
+  padding: 0.15rem 0.45rem 0.1rem;
+  border-radius: var(--radius);
+}
+
+.rb-nav__wordmark {
+  font-family: var(--font-title);
+  font-size: 0.68rem;
+  letter-spacing: var(--tracking-cinzel);
+  text-transform: uppercase;
+}
+
+.rb-nav__links,
+.nav-links {
+  display: flex;
+  gap: 1.4rem;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.rb-nav__links a,
+.nav-links a {
+  font-family: var(--font-title);
+  font-size: var(--text-nav);
+  letter-spacing: var(--tracking-cinzel);
+  text-transform: uppercase;
+  color: var(--parchment);
+  text-decoration: none;
+  transition: color var(--ease-color);
+}
+
+.rb-nav__links a:hover,
+.nav-links a:hover,
+.rb-nav__links a[aria-current="page"] {
+  color: var(--gold-lt);
+}
+
+.rb-nav__check {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.rb-nav__toggle {
+  display: none;
+  background: transparent;
+  border: 1.5px solid var(--gold);
+  color: var(--gold-pale);
+  font-family: var(--font-title);
+  font-size: 0.62rem;
+  letter-spacing: var(--tracking-cinzel);
+  text-transform: uppercase;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+@media (max-width: 860px) {
+  .rb-nav {
+    padding: 0 1rem;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: var(--nav-height);
+    overflow: visible;
+  }
+
+  .rb-nav__toggle {
+    display: inline-block;
+  }
+
+  .rb-nav__links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-basis: 100%;
+    width: 100%;
+    padding: 0.85rem 0 1.1rem;
+    gap: 0.95rem;
+    border-top: 1px solid rgba(184, 134, 11, 0.45);
+  }
+
+  .rb-nav.is-open .rb-nav__links,
+  .rb-nav__check:checked ~ .rb-nav__links {
+    display: flex;
+  }
+
+  .rb-nav__cta {
+    margin-left: 0;
+  }
+}
+
+/* ── Section headers with ✦ ── */
+
+.rb-section-header {
+  text-align: center;
+  margin: 0 0 var(--space-6);
+}
+
+.rb-section-header h1,
+.rb-section-header h2,
+.rb-section-header h3 {
+  margin-bottom: 0.35em;
+}
+
+.rb-rune,
+.rune-div,
+.full-rune {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 0.75rem auto 0;
+  color: var(--gold);
+  font-size: 0.85rem;
+  letter-spacing: 0;
+}
+
+.rb-rune::before,
+.rb-rune::after,
+.rune-div::before,
+.rune-div::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 80px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+
+.full-rune::before,
+.full-rune::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(240, 224, 192, 0.2), transparent);
+}
+
+.rb-section-header--left {
+  text-align: left;
+}
+
+.rb-section-header--left .rb-rune {
+  justify-content: flex-start;
+  margin-left: 0;
+}
+
+/* ── Banners / guild notices ── */
+
+.rb-banner {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius);
+  border: 1.5px solid transparent;
+  font-size: 1.05rem;
+}
+
+.rb-banner__mark {
+  font-family: var(--font-title);
+  font-size: 0.85rem;
+  letter-spacing: var(--tracking-cinzel);
+  text-transform: uppercase;
+  flex-shrink: 0;
+  padding-top: 0.15rem;
+}
+
+.rb-banner--gold {
+  background: rgba(184, 134, 11, 0.12);
+  border-color: var(--gold);
+  color: var(--leather);
+}
+
+.rb-banner--gold .rb-banner__mark {
+  color: var(--gold);
+}
+
+.rb-banner--green {
+  background: rgba(61, 90, 62, 0.12);
+  border-color: var(--green);
+  color: var(--leather);
+}
+
+.rb-banner--green .rb-banner__mark {
+  color: var(--green);
+}
+
+.rb-banner--crimson {
+  background: rgba(139, 38, 53, 0.1);
+  border-color: var(--crimson);
+  color: var(--leather);
+}
+
+.rb-banner--crimson .rb-banner__mark {
+  color: var(--crimson);
+}
+
+.rb-banner--ink {
+  background: var(--ink);
+  border-color: var(--gold);
+  color: var(--parchment);
+}
+
+.rb-banner--ink .rb-banner__mark {
+  color: var(--gold-pale);
+}
+
+/* ── Dialog / modal ── */
+
+.rb-dialog {
+  border: 2px solid var(--gold);
+  border-radius: var(--radius);
+  background: var(--parchment);
+  color: var(--leather);
+  padding: 0;
+  max-width: 32rem;
+  width: calc(100% - 2rem);
+  box-shadow: var(--shadow-gold-sign), var(--shadow-panel);
+}
+
+.rb-dialog::backdrop {
+  background: rgba(14, 7, 4, 0.72);
+}
+
+.rb-dialog__bar {
+  background: var(--ink);
+  color: var(--gold-pale);
+  padding: 0.75rem 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--gold);
+}
+
+.rb-dialog__title {
+  font-family: var(--font-title);
+  font-size: 0.78rem;
+  letter-spacing: var(--tracking-cinzel);
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--gold-pale);
+}
+
+.rb-dialog__close {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold-pale);
+  font-family: var(--font-title);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.rb-dialog__close:hover {
+  background: rgba(184, 134, 11, 0.18);
+}
+
+.rb-dialog__body {
+  padding: var(--space-6);
+}
+
+.rb-dialog__actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding: 0 var(--space-6) var(--space-6);
+}
+
+/* ── Footer ── */
+
+.rb-footer {
+  background: var(--ink);
+  color: var(--parchment-dk);
+  padding: 2.5rem 2rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(184, 134, 11, 0.3);
+}
+
+.rb-footer img {
+  height: 48px;
+  margin: 0 auto 1rem;
+  background: var(--parchment);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius);
+}
+
+.rb-footer__tagline {
+  font-style: italic;
+  color: rgba(240, 224, 192, 0.45);
+  font-size: 0.92rem;
+  margin-bottom: 1.5rem;
+}
+
+.rb-footer__links {
+  display: flex;
+  gap: 1.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.8rem;
+}
+
+.rb-footer__links a {
+  font-family: var(--font-title);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--parchment-dk);
+  text-decoration: none;
+}
+
+.rb-footer__links a:hover {
+  color: var(--gold-lt);
+}
+
+.rb-footer__copy {
+  font-size: 0.8rem;
+  color: rgba(240, 224, 192, 0.28);
+  margin: 0;
+}
+
+/* ── Hero pattern (optional, from live site) ── */
+
+.rb-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5.5rem 2rem 4rem;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.rb-hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 55% at 50% 80%, var(--ember) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 30% 60%, var(--ember-mid) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 70% 55%, #4a1e06 0%, transparent 60%),
+    var(--hearth);
+}
+
+.rb-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+}
+
+.rb-hero h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 700;
+  color: var(--gold-pale);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 60px rgba(184, 134, 11, 0.35), 0 2px 12px rgba(0, 0, 0, 0.8);
+}
+
+.rb-hero__tagline {
+  font-style: italic;
+  font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+  color: var(--parchment-dk);
+  margin: 0 auto 2rem;
+  max-width: 32rem;
+}
+
+.rb-hero__ctas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}

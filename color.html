@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Color · Rosebrook Design System</title>
+  <meta name="description" content="Rosebrook color tokens — parchment, leather, gold, forest, and crimson.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Cinzel+Decorative:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/rosebrook.css">
+  <link rel="stylesheet" href="css/docs.css">
+  <link rel="icon" href="assets/logo-300.png">
+</head>
+<body class="docs">
+  <a class="docs-skip" href="#content">Skip to the hall</a>
+  <nav class="rb-nav" data-rb-nav>
+    <a class="rb-nav__brand" href="index.html">
+      <img src="assets/logo-300.png" alt="Rosebrook">
+    </a>
+    <input class="rb-nav__check" id="docs-nav-toggle" type="checkbox" data-nav-toggle aria-controls="docs-nav" aria-expanded="false">
+    <label class="rb-nav__toggle" for="docs-nav-toggle">Menu</label>
+    <ul class="rb-nav__links" id="docs-nav">
+      <li><a href="index.html">Hall</a></li>
+      <li><a href="color.html" aria-current="page">Color</a></li>
+      <li><a href="type.html">Type</a></li>
+      <li><a href="components.html">Components</a></li>
+      <li><a href="voice.html">Voice</a></li>
+      <li><a href="logo.html">Logo</a></li>
+      <li><a class="rb-nav__cta" href="https://rosebrookrpggoods.com">Live shop</a></li>
+    </ul>
+  </nav>
+
+  <main id="content" class="docs-main">
+    <header class="docs-hero rb-section-header rb-section-header--left">
+      <p class="rb-eyebrow">Pigments of the hall</p>
+      <h1>Color tokens</h1>
+      <div class="rb-rune" aria-hidden="true">✦</div>
+      <p class="rb-lead docs-prose" style="margin-top:1.2rem">These custom properties are the live shop’s palette. Click a pot to copy its hex into your pouch. Do not reach for WordPress blue — <code>#007cba</code> is a leftover, not Rosebrook.</p>
+    </header>
+
+    <section class="docs-block">
+      <div class="docs-grid">
+        <button class="docs-swatch" type="button" data-copy="#F0E6C8">
+          <div class="docs-swatch__chip" style="background:#F0E6C8"></div>
+          <div class="docs-swatch__meta">
+            <p class="docs-swatch__name">--parchment</p>
+            <p class="docs-swatch__hex">#F0E6C8</p>
+            <p class="docs-swatch__role">Page and panel background</p>
+          </div>
+        </button>
+        <button class="docs-swatch" type="button" data-copy="#DDD0A8">
+          <div class="docs-swatch__chip" style="background:#DDD0A8"></div>
+          <div class="docs-swatch__meta">
+            <p class="docs-swatch__name">--parchment-dk</p>
+            <p class="docs-swatch__hex">#DDD0A8</p>
+            <p class="docs-swatch__role">Recessed / alternate surface</p>
+          </div>
+        </button>
+        <button class="docs-swatch" type="button" data-copy="#2C1A0E">
+          <div class="docs-swatch__chip" style="background:#2C1A0E"></div>
+          <div class="docs-swatch__meta">
+            <p class="docs-swatch__name">--leather</p>
+            <p class="docs-swatch__hex">#2C1A0E</p>
+            <p class="docs-swatch__role">Deep chrome and headings</p>
+          </div>
+        </button>
+        <button class="docs-swatch" type="button" data-copy="#4A2E1A">
+          <div class="docs-swatch__chip" style="background:#4A2E1A"></div>
+          <div class="docs-swatch__meta">
+            <p class="docs-swatch__name">--leather-mid</p>
+            <p class="docs-swatch__hex">#4A2E1A</p>
+            <p class="docs-swatch__role">Secondary chrome</p>
+          </div>
+        </button>
+        <button class="docs-swatch" type="button" data-copy="#B8860B">
+          <div class="docs-swatch__chip" style="background:#B8860B"></div>
+          <div class="docs-swatch__meta">
+            <p class="docs-swatch__name">--gold</p>
+            <p class="docs-swatch__hex">#B8860B</p>
+            <p class="docs-swatch__role">Primary accent and CTAs</p>
+          </div>
+        </button>
+        <button class="docs-swatch" type="button" data-copy="#D4A017">
+          <div class="docs-swatch__chip" style="background:#D4A017"></div>
+          <div class="docs-swatch__meta">
+            <p class="docs-swatch__name">--gold-lt</p>
+            <p class="docs-swatch__hex">#D4A017</p>
+            <p class="docs-swatch__role">Hover / highlight gold</p>
+          </div>
+        </button>
+        <button class="docs-swatch" type="button" data-copy="#F0D080">
+          <div class="docs-swatch__chip" style="background:#F0D080"></div>
+          <div class="docs-swatch__meta">
+            <p class="docs-swatch__name">--gold-pale</p>
+            <p class="docs-swatch__hex">#F0D080</p>
+            <p class="docs-swatch__role">Soft fills, borders, on-ink type</p>
+          </div>
+        </button>
+        <button class="docs-swatch" type="button" data-copy="#3D5A3E">
+          <div class="docs-swatch__chip" style="background:#3D5A3E"></div>
+          <div class="docs-swatch__meta">
+            <p class="docs-swatch__name">--green</p>
+            <p class="docs-swatch__hex">#3D5A3E</p>
+            <p class="docs-swatch__role">Forest — success and nature</p>
+          </div>
+        </button>
+        <button class="docs-swatch" type="button" data-copy="#8B2635">
+          <div class="docs-swatch__chip" style="background:#8B2635"></div>
+          <div class="docs-swatch__meta">
+            <p class="docs-swatch__name">--crimson</p>
+            <p class="docs-swatch__hex">#8B2635</p>
+            <p class="docs-swatch__role">Alert / rare accent</p>
+          </div>
+        </button>
+        <button class="docs-swatch" type="button" data-copy="#1A0F08">
+          <div class="docs-swatch__chip" style="background:#1A0F08"></div>
+          <div class="docs-swatch__meta">
+            <p class="docs-swatch__name">--ink</p>
+            <p class="docs-swatch__hex">#1A0F08</p>
+            <p class="docs-swatch__role">Nav chrome; body text on parchment</p>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <section class="docs-block">
+      <header class="rb-section-header rb-section-header--left">
+        <p class="rb-eyebrow">The rest of the pouch</p>
+        <h2>Space, radius, glow</h2>
+        <div class="rb-rune" aria-hidden="true">✦</div>
+      </header>
+      <div class="docs-table-wrap">
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Value</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>--radius</code></td>
+              <td>2px</td>
+              <td>Sharp corners — tavern joinery, not app pills</td>
+            </tr>
+            <tr>
+              <td><code>--tracking-cinzel</code></td>
+              <td>0.12em</td>
+              <td>Uppercase Cinzel (nav, labels)</td>
+            </tr>
+            <tr>
+              <td><code>--tracking-cinzel-wide</code></td>
+              <td>0.14em</td>
+              <td>Buttons</td>
+            </tr>
+            <tr>
+              <td><code>--tracking-eyebrow</code></td>
+              <td>0.25em</td>
+              <td>Section eyebrows</td>
+            </tr>
+            <tr>
+              <td><code>--shadow-gold</code></td>
+              <td>0 0 20px rgba(184,134,11,.5)</td>
+              <td>Primary CTA hover glow</td>
+            </tr>
+            <tr>
+              <td><code>--shadow-gold-sm</code></td>
+              <td>0 0 14px rgba(184,134,11,.5)</td>
+              <td>Nav craft button glow</td>
+            </tr>
+            <tr>
+              <td><code>--space-4</code> … <code>--space-12</code></td>
+              <td>1rem – 5rem</td>
+              <td>Scale from tight joinery to hall padding</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="docs-prose" style="margin-top:1.2rem">Machine-readable export: <a class="rb-link" href="assets/tokens.json">assets/tokens.json</a>. Source of truth for products: <a class="rb-link" href="css/tokens.css">css/tokens.css</a>.</p>
+    </section>
+  </main>
+
+  <footer class="rb-footer">
+    <img src="assets/logo-300.png" alt="">
+    <p class="rb-footer__tagline">Real-World Fantasy Immersion · a plain HTML &amp; CSS design system</p>
+    <div class="rb-footer__links">
+      <a href="index.html">Hall</a>
+      <a href="type.html">Type</a>
+      <a href="components.html">Components</a>
+      <a href="https://rosebrookrpggoods.com">rosebrookrpggoods.com</a>
+    </div>
+    <p class="rb-footer__copy">© 2026 Rosebrook RPG Goods · Founder’s Guild</p>
+  </footer>
+  <script src="js/docs.js"></script>
+</body>
+</html>

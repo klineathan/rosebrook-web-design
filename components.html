@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Components · Rosebrook Design System</title>
+  <meta name="description" content="Rosebrook UI components: buttons, cards, badges, inputs, nav, banners, dialog.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Cinzel+Decorative:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/rosebrook.css">
+  <link rel="stylesheet" href="css/docs.css">
+  <link rel="icon" href="assets/logo-300.png">
+</head>
+<body class="docs">
+  <a class="docs-skip" href="#content">Skip to the hall</a>
+  <nav class="rb-nav" data-rb-nav>
+    <a class="rb-nav__brand" href="index.html">
+      <img src="assets/logo-300.png" alt="Rosebrook">
+    </a>
+    <input class="rb-nav__check" id="docs-nav-toggle" type="checkbox" data-nav-toggle aria-controls="docs-nav" aria-expanded="false">
+    <label class="rb-nav__toggle" for="docs-nav-toggle">Menu</label>
+    <ul class="rb-nav__links" id="docs-nav">
+      <li><a href="index.html">Hall</a></li>
+      <li><a href="color.html">Color</a></li>
+      <li><a href="type.html">Type</a></li>
+      <li><a href="components.html" aria-current="page">Components</a></li>
+      <li><a href="voice.html">Voice</a></li>
+      <li><a href="logo.html">Logo</a></li>
+      <li><a class="rb-nav__cta" href="https://rosebrookrpggoods.com">Live shop</a></li>
+    </ul>
+  </nav>
+
+  <main id="content" class="docs-main">
+    <header class="docs-hero rb-section-header rb-section-header--left">
+      <p class="rb-eyebrow">Wares of the bench</p>
+      <h1>Components</h1>
+      <div class="rb-rune" aria-hidden="true">✦</div>
+      <p class="rb-lead docs-prose" style="margin-top:1.2rem">Cozy tavern controls, not a sterile lab kit. Live-site class names (<code>.btn</code>, <code>.btn-gold</code>, <code>.btn-outline</code>, <code>.btn-sm</code>) remain as aliases beside the <code>rb-</code> family.</p>
+      <ul class="docs-toc">
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#cards">Cards</a></li>
+        <li><a href="#badges">Badges</a></li>
+        <li><a href="#inputs">Inputs</a></li>
+        <li><a href="#nav">Nav</a></li>
+        <li><a href="#headers">Headers</a></li>
+        <li><a href="#banners">Banners</a></li>
+        <li><a href="#dialog">Dialog</a></li>
+      </ul>
+    </header>
+
+    <section class="docs-block" id="buttons">
+      <header class="rb-section-header rb-section-header--left">
+        <p class="rb-eyebrow">Call to the table</p>
+        <h2>Buttons</h2>
+        <div class="rb-rune" aria-hidden="true">✦</div>
+      </header>
+      <div class="rb-card">
+        <div class="docs-demo">
+          <a class="rb-btn rb-btn--gold" href="#buttons">Enter the shop</a>
+          <a class="rb-btn rb-btn--outline rb-btn--on-parchment" href="#buttons">See the banners</a>
+          <a class="rb-btn rb-btn--gold rb-btn--sm" href="#buttons">Founder’s discount</a>
+          <button class="rb-btn rb-btn--gold" type="button" disabled>Sold for now</button>
+        </div>
+        <div class="rb-on-ink" style="margin-top:1.25rem; padding:1.25rem; border-radius:2px; display:flex; flex-wrap:wrap; gap:.85rem; align-items:center;">
+          <a class="btn btn-gold" href="#buttons">.btn-gold</a>
+          <a class="btn btn-outline" href="#buttons">.btn-outline</a>
+          <a class="btn btn-gold btn-sm" href="#buttons">.btn-sm</a>
+        </div>
+        <pre class="docs-snippet"><code>&lt;a class="rb-btn rb-btn--gold" href="#"&gt;Enter the shop&lt;/a&gt;
+&lt;a class="rb-btn rb-btn--outline" href="#"&gt;See the banners&lt;/a&gt;
+&lt;a class="rb-btn rb-btn--gold rb-btn--sm" href="#"&gt;Founder’s discount&lt;/a&gt;</code></pre>
+      </div>
+    </section>
+
+    <section class="docs-block" id="links">
+      <header class="rb-section-header rb-section-header--left">
+        <p class="rb-eyebrow">Footpaths</p>
+        <h2>Links</h2>
+        <div class="rb-rune" aria-hidden="true">✦</div>
+      </header>
+      <div class="rb-card docs-prose">
+        <p>Take a stroll to the <a class="rb-link" href="https://rosebrookrpggoods.com">artisan district</a>, or a quieter walk toward <a class="rb-link--quiet" href="voice.html">voice &amp; lore</a>.</p>
+      </div>
+    </section>
+
+    <section class="docs-block" id="cards">
+      <header class="rb-section-header rb-section-header--left">
+        <p class="rb-eyebrow">Shelves</p>
+        <h2>Cards &amp; panels</h2>
+        <div class="rb-rune" aria-hidden="true">✦</div>
+      </header>
+      <div class="rb-card-grid">
+        <article class="rb-card">
+          <p class="rb-card__kicker">Elven</p>
+          <h3 class="rb-card__title">The Elven Bookshelf</h3>
+          <p class="rb-card__body">A gorgeous relic from the most serene and remote forests of your realm.</p>
+        </article>
+        <article class="rb-card rb-card--recessed">
+          <p class="rb-card__kicker">Dwarven</p>
+          <h3 class="rb-card__title">The Dwarven Bookshelf</h3>
+          <p class="rb-card__body">Forged in the style of the mountain halls — a stunning and rare runic piece of history.</p>
+        </article>
+        <article class="rb-card rb-card--ink">
+          <p class="rb-card__kicker">Arcane</p>
+          <h3 class="rb-card__title">The Wizard Bookshelf</h3>
+          <p class="rb-card__body">Prized possession of only the most legendary mages — a worthy vessel of your world’s deepest mysteries.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="docs-block" id="badges">
+      <header class="rb-section-header rb-section-header--left">
+        <p class="rb-eyebrow">Seals</p>
+        <h2>Badges</h2>
+        <div class="rb-rune" aria-hidden="true">✦</div>
+      </header>
+      <div class="docs-demo">
+        <span class="rb-badge rb-badge--gold">Founder’s discount</span>
+        <span class="rb-badge rb-badge--pale">Kickstarter</span>
+        <span class="rb-badge rb-badge--green">In the forest</span>
+        <span class="rb-badge rb-badge--crimson">Rare relic</span>
+        <span class="rb-badge rb-badge--leather">Guild hall</span>
+        <span class="rb-badge rb-badge--outline">Coming soon</span>
+      </div>
+    </section>
+
+    <section class="docs-block" id="inputs">
+      <header class="rb-section-header rb-section-header--left">
+        <p class="rb-eyebrow">The ledger</p>
+        <h2>Inputs</h2>
+        <div class="rb-rune" aria-hidden="true">✦</div>
+      </header>
+      <div class="rb-card" style="max-width:32rem">
+        <form class="docs-demo--stack docs-demo" onsubmit="return false">
+          <div class="rb-field">
+            <label class="rb-label" for="guild-name">Guild name</label>
+            <input class="rb-input" id="guild-name" name="guild" type="text" placeholder="Founder’s Guild">
+            <p class="rb-hint">The name that will hang above your hall.</p>
+          </div>
+          <div class="rb-field">
+            <label class="rb-label" for="realm">Realm</label>
+            <select class="rb-select" id="realm" name="realm">
+              <option>Elven woods</option>
+              <option>Mountain halls</option>
+              <option>Arcane tower</option>
+            </select>
+          </div>
+          <div class="rb-field">
+            <label class="rb-label" for="lore">A scrap of lore</label>
+            <textarea class="rb-textarea" id="lore" name="lore" placeholder="Write the quest only you can tell…"></textarea>
+          </div>
+          <div class="rb-field is-invalid">
+            <label class="rb-label" for="sigil">Sigil (required)</label>
+            <input class="rb-input" id="sigil" name="sigil" type="text" aria-invalid="true">
+            <p class="rb-error">The ledger still waits for a sigil.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="docs-block" id="nav">
+      <header class="rb-section-header rb-section-header--left">
+        <p class="rb-eyebrow">The lintel</p>
+        <h2>Nav</h2>
+        <div class="rb-rune" aria-hidden="true">✦</div>
+      </header>
+      <p class="docs-prose">Ink bar, gold border, Cinzel uppercase links. The hall’s own header is the working example. On narrow viewports, the Menu toggle opens the list — vanilla JS, no build.</p>
+      <pre class="docs-snippet"><code>&lt;nav class="rb-nav"&gt;
+  &lt;a class="rb-nav__brand" href="/"&gt;…&lt;/a&gt;
+  &lt;ul class="rb-nav__links"&gt;
+    &lt;li&gt;&lt;a href="#wares"&gt;Wares&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="rb-nav__cta" href="#shop"&gt;Enter the shop&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+    </section>
+
+    <section class="docs-block" id="headers">
+      <header class="rb-section-header">
+        <p class="rb-eyebrow">Our Wares</p>
+        <h2>Section headers with ✦</h2>
+        <div class="rb-rune" aria-hidden="true">✦</div>
+      </header>
+      <p class="docs-prose" style="margin:0 auto; text-align:center">Centered by default; add <code>rb-section-header--left</code> when the copy should sit on the left like a tavern menu.</p>
+    </section>
+
+    <section class="docs-block" id="banners">
+      <header class="rb-section-header rb-section-header--left">
+        <p class="rb-eyebrow">Proclamations</p>
+        <h2>Banners</h2>
+        <div class="rb-rune" aria-hidden="true">✦</div>
+      </header>
+      <div class="docs-demo--stack docs-demo">
+        <div class="rb-banner rb-banner--gold">
+          <span class="rb-banner__mark">Notice</span>
+          <p>The Founder’s Discount still hangs on the shop door — a gold scroll for those who arrive early.</p>
+        </div>
+        <div class="rb-banner rb-banner--green">
+          <span class="rb-banner__mark">Forest</span>
+          <p>The Elven Bookshelf has returned from the remote woods. Take a stroll before the grove goes quiet.</p>
+        </div>
+        <div class="rb-banner rb-banner--crimson">
+          <span class="rb-banner__mark">Rare</span>
+          <p>This runic piece is nearly spoken for. The mountain halls do not forge a second without a plea.</p>
+        </div>
+        <div class="rb-banner rb-banner--ink">
+          <span class="rb-banner__mark">Guild</span>
+          <p>Turn any room into a Guild Hall — 58″ wall banners in six colors with gold scroll-work woven into the fabric.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="docs-block" id="dialog">
+      <header class="rb-section-header rb-section-header--left">
+        <p class="rb-eyebrow">A quiet room</p>
+        <h2>Dialog</h2>
+        <div class="rb-rune" aria-hidden="true">✦</div>
+      </header>
+      <p class="docs-prose">Native <code>&lt;dialog&gt;</code> with an ink title bar. Escape dismisses it, as any polite tavern would allow.</p>
+      <button class="rb-btn rb-btn--gold" type="button" data-dialog-open="guild-dialog">Open the guild door</button>
+      <dialog class="rb-dialog" id="guild-dialog">
+        <div class="rb-dialog__bar">
+          <h3 class="rb-dialog__title">Founder’s Guild</h3>
+          <button class="rb-dialog__close" type="button" data-dialog-close>Close</button>
+        </div>
+        <div class="rb-dialog__body">
+          <p>Your wildest ideas deserve the opportunity to create the most memorable campaign. Step through and claim a seat by the hearth.</p>
+        </div>
+        <div class="rb-dialog__actions">
+          <button class="rb-btn rb-btn--outline rb-btn--on-parchment rb-btn--sm" type="button" data-dialog-close>Remain outside</button>
+          <a class="rb-btn rb-btn--gold rb-btn--sm" href="https://rosebrookrpggoods.com">Enter the shop</a>
+        </div>
+      </dialog>
+      <pre class="docs-snippet"><code>&lt;button type="button" data-dialog-open="guild-dialog"&gt;Open&lt;/button&gt;
+&lt;dialog class="rb-dialog" id="guild-dialog"&gt;…&lt;/dialog&gt;</code></pre>
+    </section>
+  </main>
+
+  <footer class="rb-footer">
+    <img src="assets/logo-300.png" alt="">
+    <p class="rb-footer__tagline">Real-World Fantasy Immersion · a plain HTML &amp; CSS design system</p>
+    <div class="rb-footer__links">
+      <a href="index.html">Hall</a>
+      <a href="color.html">Color</a>
+      <a href="voice.html">Voice</a>
+      <a href="https://rosebrookrpggoods.com">rosebrookrpggoods.com</a>
+    </div>
+    <p class="rb-footer__copy">© 2026 Rosebrook RPG Goods · Founder’s Guild</p>
+  </footer>
+  <script src="js/docs.js"></script>
+</body>
+</html>

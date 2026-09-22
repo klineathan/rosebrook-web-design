@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rosebrook Design System</title>
+  <meta name="description" content="Plain HTML & CSS design system for Rosebrook RPG Goods — cozy fantasy tavern, parchment and leather.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Cinzel+Decorative:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/rosebrook.css">
+  <link rel="stylesheet" href="css/docs.css">
+  <link rel="icon" href="assets/logo-300.png">
+</head>
+<body class="docs">
+  <a class="docs-skip" href="#content">Skip to the hall</a>
+  <nav class="rb-nav" data-rb-nav>
+    <a class="rb-nav__brand" href="index.html">
+      <img src="assets/logo-300.png" alt="Rosebrook">
+    </a>
+    <input class="rb-nav__check" id="docs-nav-toggle" type="checkbox" data-nav-toggle aria-controls="docs-nav" aria-expanded="false">
+    <label class="rb-nav__toggle" for="docs-nav-toggle">Menu</label>
+    <ul class="rb-nav__links" id="docs-nav">
+      <li><a href="index.html" aria-current="page">Hall</a></li>
+      <li><a href="color.html">Color</a></li>
+      <li><a href="type.html">Type</a></li>
+      <li><a href="components.html">Components</a></li>
+      <li><a href="voice.html">Voice</a></li>
+      <li><a href="logo.html">Logo</a></li>
+      <li><a class="rb-nav__cta" href="https://rosebrookrpggoods.com">Live shop</a></li>
+    </ul>
+  </nav>
+
+  <header class="rb-hero">
+    <div class="rb-hero__bg" aria-hidden="true"></div>
+    <div class="rb-hero__content">
+      <p class="rb-eyebrow">Rosebrook RPG Goods · Design hall</p>
+      <h1>A web design system for the artisan district</h1>
+      <p class="rb-hero__tagline">Take a stroll through parchment, leather, and gold — the same tokens that light the live shop, written as plain HTML and CSS.</p>
+      <div class="rb-rune" aria-hidden="true">✦</div>
+      <div class="rb-hero__ctas">
+        <a class="rb-btn rb-btn--gold" href="components.html">Browse the wares</a>
+        <a class="rb-btn rb-btn--outline" href="color.html">See the pigments</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content" class="docs-main">
+    <section class="docs-block docs-prose">
+      <p class="docs-kicker">What this is</p>
+      <h2>Reusable tavern chrome — no build required</h2>
+      <p>This hall documents the Rosebrook look so future storefronts, Etsy tiles, and guild tools can share one voice. Link the CSS. Copy a component. Serve the files as a static site.</p>
+      <p>No React. No Vite. No Storybook. Open the HTML, or point Coolify at the repo root.</p>
+    </section>
+
+    <section class="docs-block">
+      <header class="rb-section-header rb-section-header--left">
+        <p class="rb-eyebrow">The shelves</p>
+        <h2>Walk the hall</h2>
+        <div class="rb-rune" aria-hidden="true">✦</div>
+      </header>
+      <div class="rb-card-grid">
+        <article class="rb-card">
+          <p class="rb-card__kicker">Tokens</p>
+          <h3 class="rb-card__title"><a class="rb-link--quiet" href="color.html">Color</a></h3>
+          <p class="rb-card__body">Parchment, leather, gold, forest, and crimson — the live-site custom properties, plus spacing, radius, and gold glow.</p>
+        </article>
+        <article class="rb-card">
+          <p class="rb-card__kicker">Letters</p>
+          <h3 class="rb-card__title"><a class="rb-link--quiet" href="type.html">Typography</a></h3>
+          <p class="rb-card__body">Cinzel Decorative for lockups, Cinzel for titles and nav, Crimson Text for long reading.</p>
+        </article>
+        <article class="rb-card">
+          <p class="rb-card__kicker">Wares</p>
+          <h3 class="rb-card__title"><a class="rb-link--quiet" href="components.html">Components</a></h3>
+          <p class="rb-card__body">Buttons, links, cards, badges, inputs, nav, banners, and a native dialog — styled like the shop.</p>
+        </article>
+        <article class="rb-card">
+          <p class="rb-card__kicker">Lore</p>
+          <h3 class="rb-card__title"><a class="rb-link--quiet" href="voice.html">Voice</a></h3>
+          <p class="rb-card__body">Second-person invitation. Elevated fantasy diction. Never corporate SaaS, never grimdark for its own sake.</p>
+        </article>
+        <article class="rb-card">
+          <p class="rb-card__kicker">Mark</p>
+          <h3 class="rb-card__title"><a class="rb-link--quiet" href="logo.html">Logo usage</a></h3>
+          <p class="rb-card__body">The arched Rosebrook lockup and rose. Clear space, backgrounds, and what not to do to the relic.</p>
+        </article>
+        <article class="rb-card rb-card--ink">
+          <p class="rb-card__kicker">Consume</p>
+          <h3 class="rb-card__title">One stylesheet</h3>
+          <p class="rb-card__body">Drop <code>css/rosebrook.css</code> and the Google Fonts link into any page. Tokens also ship as <code>assets/tokens.json</code>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="docs-block docs-prose">
+      <p class="docs-kicker">How to use</p>
+      <h2>Link the files and keep walking</h2>
+      <pre class="docs-snippet"><code>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&amp;family=Cinzel+Decorative:wght@400;700&amp;family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="css/rosebrook.css"&gt;</code></pre>
+      <p>Need only the pigments? <code>css/tokens.css</code>. Building a new control? Start from <code>css/components.css</code>. This docs skin (<code>css/docs.css</code> + <code>js/docs.js</code>) stays in the hall — leave it behind when you furnish a shop.</p>
+    </section>
+  </main>
+
+  <footer class="rb-footer">
+    <img src="assets/logo-300.png" alt="">
+    <p class="rb-footer__tagline">Real-World Fantasy Immersion · a plain HTML &amp; CSS design system</p>
+    <div class="rb-footer__links">
+      <a href="color.html">Color</a>
+      <a href="type.html">Type</a>
+      <a href="components.html">Components</a>
+      <a href="voice.html">Voice</a>
+      <a href="logo.html">Logo</a>
+      <a href="https://rosebrookrpggoods.com">rosebrookrpggoods.com</a>
+    </div>
+    <p class="rb-footer__copy">© 2026 Rosebrook RPG Goods · Founder’s Guild</p>
+  </footer>
+  <script src="js/docs.js"></script>
+</body>
+</html>
