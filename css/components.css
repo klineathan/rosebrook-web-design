@@ -131,7 +131,7 @@
 .rb-panel {
   background: var(--parchment);
   color: var(--leather);
-  border: 1px solid rgba(184, 134, 11, 0.38);
+  border: 1.5px solid rgba(184, 134, 11, 0.55);
   border-radius: var(--radius);
   box-shadow: var(--shadow-panel), var(--shadow-inset);
   padding: var(--space-6);
@@ -304,7 +304,8 @@ nav.rb-nav {
   height: var(--nav-height);
   width: 100%;
   background: var(--ink);
-  border-bottom: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold-lt);
+  box-shadow: 0 0 18px rgba(184, 134, 11, 0.28);
 }
 
 .rb-nav__brand {
@@ -358,6 +359,18 @@ nav.rb-nav {
   color: var(--gold-lt);
 }
 
+.rb-nav__check {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .rb-nav__toggle {
   display: none;
   background: transparent;
@@ -378,6 +391,7 @@ nav.rb-nav {
     flex-wrap: wrap;
     height: auto;
     min-height: var(--nav-height);
+    overflow: visible;
   }
 
   .rb-nav__toggle {
@@ -388,12 +402,15 @@ nav.rb-nav {
     display: none;
     flex-direction: column;
     align-items: flex-start;
+    flex-basis: 100%;
     width: 100%;
-    padding: 0 0 1rem;
-    gap: 0.85rem;
+    padding: 0.85rem 0 1.1rem;
+    gap: 0.95rem;
+    border-top: 1px solid rgba(184, 134, 11, 0.45);
   }
 
-  .rb-nav.is-open .rb-nav__links {
+  .rb-nav.is-open .rb-nav__links,
+  .rb-nav__check:checked ~ .rb-nav__links {
     display: flex;
   }
 

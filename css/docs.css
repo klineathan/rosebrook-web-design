@@ -6,14 +6,14 @@
 body.docs {
   background-color: var(--parchment);
   background-image:
-    radial-gradient(ellipse at 12% 0%, rgba(184, 134, 11, 0.07), transparent 46%),
-    radial-gradient(ellipse at 90% 110%, rgba(44, 26, 14, 0.07), transparent 42%),
+    radial-gradient(ellipse at 12% 0%, rgba(184, 134, 11, 0.1), transparent 46%),
+    radial-gradient(ellipse at 90% 110%, rgba(44, 26, 14, 0.1), transparent 42%),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 3px,
-      rgba(44, 26, 14, 0.018) 3px,
-      rgba(44, 26, 14, 0.018) 4px
+      rgba(44, 26, 14, 0.03) 3px,
+      rgba(44, 26, 14, 0.03) 4px
     );
   min-height: 100vh;
   display: flex;

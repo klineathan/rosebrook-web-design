@@ -6,9 +6,18 @@
   var nav = document.querySelector("[data-rb-nav]");
   var toggle = document.querySelector("[data-nav-toggle]");
   if (nav && toggle) {
-    toggle.addEventListener("click", function () {
-      var open = nav.classList.toggle("is-open");
+    var syncNav = function () {
+      var open = toggle.checked === true || nav.classList.contains("is-open");
+      if (toggle.checked === true) nav.classList.add("is-open");
+      if (toggle.checked === false) nav.classList.remove("is-open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+    toggle.addEventListener("change", syncNav);
+    toggle.addEventListener("click", function () {
+      if (toggle.type !== "checkbox") {
+        var open = nav.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      }
     });
   }
 
