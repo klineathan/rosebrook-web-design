@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Typography · Rosebrook Design System</title>
+  <meta name="description" content="Rosebrook type: Cinzel, Cinzel Decorative, and Crimson Text.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Cinzel+Decorative:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/rosebrook.css">
+  <link rel="stylesheet" href="css/docs.css">
+  <link rel="icon" href="assets/logo-300.png">
+</head>
+<body class="docs">
+  <a class="docs-skip" href="#content">Skip to the hall</a>
+  <nav class="rb-nav" data-rb-nav>
+    <a class="rb-nav__brand" href="index.html">
+      <img src="assets/logo-300.png" alt="Rosebrook">
+    </a>
+    <button class="rb-nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="docs-nav">Menu</button>
+    <ul class="rb-nav__links" id="docs-nav">
+      <li><a href="index.html">Hall</a></li>
+      <li><a href="color.html">Color</a></li>
+      <li><a href="type.html" aria-current="page">Type</a></li>
+      <li><a href="components.html">Components</a></li>
+      <li><a href="voice.html">Voice</a></li>
+      <li><a href="logo.html">Logo</a></li>
+      <li><a class="rb-nav__cta" href="https://rosebrookrpggoods.com">Live shop</a></li>
+    </ul>
+  </nav>
+
+  <main id="content" class="docs-main">
+    <header class="docs-hero rb-section-header rb-section-header--left">
+      <p class="rb-eyebrow">Letters of the realm</p>
+      <h1>Typography</h1>
+      <div class="rb-rune" aria-hidden="true">✦</div>
+      <p class="rb-lead docs-prose" style="margin-top:1.2rem">Three Google Fonts, same as the live site. Cinzel Decorative for the shop sign. Cinzel for titles, nav, and buttons. Crimson Text for anything you would read by lantern light. Leave Fira Sans and Playfair in the WordPress attic.</p>
+    </header>
+
+    <section class="docs-block">
+      <div class="docs-type-row">
+        <p class="docs-type-meta">Display · Cinzel Decorative 700 · --text-display</p>
+        <p class="rb-display" style="color:var(--leather); font-size:clamp(2rem,5vw,3.4rem); margin:0">Rosebrook RPG Goods</p>
+      </div>
+      <div class="docs-type-row">
+        <p class="docs-type-meta">Heading 1 · Cinzel 600 · --text-h1</p>
+        <h1 style="margin:0">Take a stroll down the artisan district</h1>
+      </div>
+      <div class="docs-type-row">
+        <p class="docs-type-meta">Heading 2 · Cinzel 600 · --text-h2</p>
+        <h2 style="margin:0">Our Wares</h2>
+      </div>
+      <div class="docs-type-row">
+        <p class="docs-type-meta">Heading 3 · Cinzel 600 · --text-h3</p>
+        <h3 style="margin:0">The Elven Bookshelf</h3>
+      </div>
+      <div class="docs-type-row">
+        <p class="docs-type-meta">Eyebrow · Cinzel · letter-spacing 0.25em · uppercase</p>
+        <p class="rb-eyebrow" style="margin:0">Founder’s Guild</p>
+      </div>
+      <div class="docs-type-row">
+        <p class="docs-type-meta">Button / nav · Cinzel · 0.12–0.14em tracking · uppercase</p>
+        <p style="font-family:var(--font-title); letter-spacing:var(--tracking-cinzel-wide); text-transform:uppercase; font-size:var(--text-btn); margin:0">Enter the shop</p>
+      </div>
+      <div class="docs-type-row">
+        <p class="docs-type-meta">Body · Crimson Text 400 · 18px / 1.65</p>
+        <p class="docs-prose" style="margin:0">A gorgeous relic from the most serene and remote forests of your realm. Forged in the style of the mountain halls — a stunning and rare runic piece of history.</p>
+      </div>
+      <div class="docs-type-row">
+        <p class="docs-type-meta">Lead / tagline · Crimson Text italic</p>
+        <p class="rb-lead" style="margin:0">Real-World Fantasy Immersion</p>
+      </div>
+    </section>
+
+    <section class="docs-block">
+      <header class="rb-section-header rb-section-header--left">
+        <p class="rb-eyebrow">Weights &amp; loads</p>
+        <h2>How to summon the fonts</h2>
+        <div class="rb-rune" aria-hidden="true">✦</div>
+      </header>
+      <div class="docs-table-wrap">
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Family</th>
+              <th>Weights</th>
+              <th>Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cinzel Decorative</td>
+              <td>400, 700</td>
+              <td>Hero lockups, shop signs</td>
+            </tr>
+            <tr>
+              <td>Cinzel</td>
+              <td>400, 600, 900</td>
+              <td>Headings, nav, buttons, badges</td>
+            </tr>
+            <tr>
+              <td>Crimson Text</td>
+              <td>400, 600, italic</td>
+              <td>Body, captions, taglines</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <pre class="docs-snippet"><code>font-family: var(--font-display); /* Cinzel Decorative */
+font-family: var(--font-title);   /* Cinzel */
+font-family: var(--font-body);    /* Crimson Text */</code></pre>
+    </section>
+  </main>
+
+  <footer class="rb-footer">
+    <img src="assets/logo-300.png" alt="">
+    <p class="rb-footer__tagline">Real-World Fantasy Immersion · a plain HTML &amp; CSS design system</p>
+    <div class="rb-footer__links">
+      <a href="index.html">Hall</a>
+      <a href="color.html">Color</a>
+      <a href="components.html">Components</a>
+      <a href="https://rosebrookrpggoods.com">rosebrookrpggoods.com</a>
+    </div>
+    <p class="rb-footer__copy">© 2026 Rosebrook RPG Goods · Founder’s Guild</p>
+  </footer>
+  <script src="js/docs.js"></script>
+</body>
+</html>

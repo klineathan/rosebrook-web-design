@@ -1,0 +1,109 @@
+/**
+ * Rosebrook RPG Goods — design tokens
+ * Authoritative colors match the live site custom properties
+ * (https://rosebrookrpggoods.com, 2026-09-21).
+ *
+ * Consume via: <link rel="stylesheet" href="css/rosebrook.css">
+ * or import this file alone and compose your own layers.
+ */
+
+:root {
+  /* ── Color (live-site names) ── */
+  --parchment: #f0e6c8; /* page / panel background */
+  --parchment-dk: #ddd0a8; /* recessed / alt surface */
+  --leather: #2c1a0e; /* deep UI chrome, headers */
+  --leather-mid: #4a2e1a; /* secondary chrome */
+  --gold: #b8860b; /* primary accent / CTAs */
+  --gold-lt: #d4a017; /* hover / highlight gold */
+  --gold-pale: #f0d080; /* soft gold fills / borders */
+  --green: #3d5a3e; /* forest accent (success / nature) */
+  --crimson: #8b2635; /* alert / rare accent */
+  --ink: #1a0f08; /* body text on parchment; nav chrome */
+
+  /* Hearth / ember atmospheres used on dark hero surfaces */
+  --ember: #3d1a0a;
+  --ember-mid: #5c2a08;
+  --hearth: #0e0704;
+
+  /* Namespaced aliases (same values) */
+  --rb-parchment: var(--parchment);
+  --rb-parchment-dk: var(--parchment-dk);
+  --rb-leather: var(--leather);
+  --rb-leather-mid: var(--leather-mid);
+  --rb-gold: var(--gold);
+  --rb-gold-lt: var(--gold-lt);
+  --rb-gold-pale: var(--gold-pale);
+  --rb-green: var(--green);
+  --rb-crimson: var(--crimson);
+  --rb-ink: var(--ink);
+
+  /* ── Typography ── */
+  --font-display: "Cinzel Decorative", "Cinzel", serif;
+  --font-title: "Cinzel", serif;
+  --font-body: "Crimson Text", Georgia, "Times New Roman", serif;
+
+  --text-xs: 0.68rem;
+  --text-sm: 0.74rem;
+  --text-nav: 0.72rem;
+  --text-btn: 0.8rem;
+  --text-body: 1.125rem; /* 18px — live site body */
+  --text-lead: 1.25rem;
+  --text-h6: 0.95rem;
+  --text-h5: 1.15rem;
+  --text-h4: 1.4rem;
+  --text-h3: 1.7rem;
+  --text-h2: clamp(1.6rem, 4vw, 2.6rem);
+  --text-h1: clamp(2.1rem, 5vw, 3.4rem);
+  --text-display: clamp(2.4rem, 6vw, 5rem);
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-body: 1.65;
+
+  /* Cinzel uppercase tracking (live site) */
+  --tracking-cinzel: 0.12em;
+  --tracking-cinzel-wide: 0.14em;
+  --tracking-eyebrow: 0.25em;
+  --tracking-founder: 0.18em;
+
+  /* ── Space ── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2.5rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 5rem;
+
+  --nav-height: 62px;
+  --measure: 40rem;
+  --content: 68rem;
+
+  /* ── Radius — sharp, ~2px (not pill UI) ── */
+  --radius: 2px;
+  --radius-sm: 2px;
+  --radius-md: 3px;
+
+  /* ── Borders ── */
+  --border-gold: 1.5px solid var(--gold);
+  --border-gold-hairline: 1px solid rgba(184, 134, 11, 0.35);
+  --border-ink: 1px solid var(--ink);
+
+  /* ── Gold glow + elevation ── */
+  --shadow-gold: 0 0 20px rgba(184, 134, 11, 0.5);
+  --shadow-gold-sm: 0 0 14px rgba(184, 134, 11, 0.5);
+  --shadow-gold-soft: 0 0 16px rgba(184, 134, 11, 0.3);
+  --shadow-gold-sign: 0 4px 28px rgba(184, 134, 11, 0.35);
+  --shadow-panel: 0 10px 28px rgba(26, 15, 8, 0.14);
+  --shadow-inset: inset 0 1px 0 rgba(240, 208, 128, 0.25);
+
+  /* ── Motion ── */
+  --ease: 0.25s ease;
+  --ease-color: 0.2s ease;
+
+  /* ── Focus ── */
+  --focus-ring: 0 0 0 3px rgba(212, 160, 23, 0.45);
+}

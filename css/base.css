@@ -1,0 +1,180 @@
+/**
+ * Rosebrook base — reset, document defaults, typography primitives.
+ * Pair with tokens.css. Does not include docs-site chrome.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--leather);
+  background-color: var(--parchment);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--gold);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--gold-lt);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-lt);
+  outline-offset: 3px;
+  box-shadow: var(--focus-ring);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  color: var(--leather);
+  margin: 0 0 0.6em;
+}
+
+h1 {
+  font-size: var(--text-h1);
+}
+
+h2 {
+  font-size: var(--text-h2);
+}
+
+h3 {
+  font-size: var(--text-h3);
+}
+
+h4 {
+  font-size: var(--text-h4);
+}
+
+h5 {
+  font-size: var(--text-h5);
+}
+
+h6 {
+  font-size: var(--text-h6);
+  letter-spacing: var(--tracking-cinzel);
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+small {
+  font-size: 0.88em;
+}
+
+hr.rb-rule {
+  border: 0;
+  height: 1px;
+  margin: var(--space-6) 0;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+
+.rb-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-display);
+  line-height: var(--leading-tight);
+  color: var(--gold-pale);
+}
+
+.rb-eyebrow {
+  font-family: var(--font-title);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 0.6rem;
+}
+
+.rb-lead {
+  font-size: var(--text-lead);
+  font-style: italic;
+  color: var(--leather-mid);
+}
+
+.rb-measure {
+  max-width: var(--measure);
+}
+
+.rb-on-ink {
+  background: var(--ink);
+  color: var(--parchment);
+}
+
+.rb-on-ink h1,
+.rb-on-ink h2,
+.rb-on-ink h3,
+.rb-on-ink h4,
+.rb-on-ink h5,
+.rb-on-ink h6 {
+  color: var(--gold-pale);
+}
+
+.rb-on-ink p,
+.rb-on-ink .rb-lead {
+  color: var(--parchment-dk);
+}
+
+.rb-on-ink a {
+  color: var(--gold-pale);
+}
+
+.rb-on-ink a:hover {
+  color: var(--gold-lt);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

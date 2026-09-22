@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Logo · Rosebrook Design System</title>
+  <meta name="description" content="Rosebrook logo usage: lockup, clear space, backgrounds.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Cinzel+Decorative:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/rosebrook.css">
+  <link rel="stylesheet" href="css/docs.css">
+  <link rel="icon" href="assets/logo-300.png">
+</head>
+<body class="docs">
+  <a class="docs-skip" href="#content">Skip to the hall</a>
+  <nav class="rb-nav" data-rb-nav>
+    <a class="rb-nav__brand" href="index.html">
+      <img src="assets/logo-300.png" alt="Rosebrook">
+    </a>
+    <button class="rb-nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="docs-nav">Menu</button>
+    <ul class="rb-nav__links" id="docs-nav">
+      <li><a href="index.html">Hall</a></li>
+      <li><a href="color.html">Color</a></li>
+      <li><a href="type.html">Type</a></li>
+      <li><a href="components.html">Components</a></li>
+      <li><a href="voice.html">Voice</a></li>
+      <li><a href="logo.html" aria-current="page">Logo</a></li>
+      <li><a class="rb-nav__cta" href="https://rosebrookrpggoods.com">Live shop</a></li>
+    </ul>
+  </nav>
+
+  <main id="content" class="docs-main">
+    <header class="docs-hero rb-section-header rb-section-header--left">
+      <p class="rb-eyebrow">The rose above the door</p>
+      <h1>Logo usage</h1>
+      <div class="rb-rune" aria-hidden="true">✦</div>
+      <p class="rb-lead docs-prose" style="margin-top:1.2rem">Arched <strong>ROSEBROOK</strong> lockup in gold-edged lettering, a single red rose beneath. File in this repo: <a class="rb-link" href="assets/logo-300.png">assets/logo-300.png</a>. The live shop also hangs a 150px mark in the lintel.</p>
+    </header>
+
+    <section class="docs-block">
+      <div class="docs-logo-stage">
+        <figure class="docs-logo-stage--parchment">
+          <img src="assets/logo-300.png" alt="Rosebrook logo on parchment" width="240">
+          <figcaption>On parchment</figcaption>
+        </figure>
+        <figure class="docs-logo-stage--dark">
+          <img src="assets/logo-300.png" alt="Rosebrook logo on ink, seated on a parchment plate" width="200" style="background:var(--parchment); padding:.35rem .7rem; border-radius:2px">
+          <figcaption>On ink — rest it on a parchment plate</figcaption>
+        </figure>
+        <figure class="docs-logo-stage--leather">
+          <img src="assets/logo-300.png" alt="Rosebrook logo on leather" width="200" style="background:var(--parchment); padding:.35rem .7rem; border-radius:2px">
+          <figcaption>On leather</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="docs-block">
+      <header class="rb-section-header rb-section-header--left">
+        <p class="rb-eyebrow">Keep the relic intact</p>
+        <h2>Rules of the mark</h2>
+        <div class="rb-rune" aria-hidden="true">✦</div>
+      </header>
+      <div class="docs-pair">
+        <div class="docs-do">
+          <h3>Honor the lockup</h3>
+          <ul>
+            <li>Use the provided PNG. Keep the rose and the arch together.</li>
+            <li>Give it breathing room — at least the height of the rose’s bloom on every side.</li>
+            <li>Prefer 150px tall in a compact nav; 300px (or the source file) for signs and mastheads.</li>
+            <li>On ink or leather, seat the mark on a small parchment plate so the white field reads as a shop sign, not a hole.</li>
+            <li>Write the full name in copy as <strong>Rosebrook RPG Goods</strong>.</li>
+          </ul>
+        </div>
+        <div class="docs-dont">
+          <h3>Do not</h3>
+          <ul>
+            <li>Recolor the rose, the stem, or the gold edge to “match a theme.”</li>
+            <li>Stretch, outline, or drop a cheap bevel on the letters.</li>
+            <li>Set the mark smaller than ~72px wide — the arch collapses.</li>
+            <li>Place it on busy art without a parchment plate or clear field.</li>
+            <li>Rebuild the wordmark in a neighboring serif “close enough.”</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rb-footer">
+    <img src="assets/logo-300.png" alt="">
+    <p class="rb-footer__tagline">Real-World Fantasy Immersion · a plain HTML &amp; CSS design system</p>
+    <div class="rb-footer__links">
+      <a href="index.html">Hall</a>
+      <a href="voice.html">Voice</a>
+      <a href="color.html">Color</a>
+      <a href="https://rosebrookrpggoods.com">rosebrookrpggoods.com</a>
+    </div>
+    <p class="rb-footer__copy">© 2026 Rosebrook RPG Goods · Founder’s Guild</p>
+  </footer>
+  <script src="js/docs.js"></script>
+</body>
+</html>
